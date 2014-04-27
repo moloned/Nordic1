@@ -1,0 +1,182 @@
+
+nRF51822.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .vectors      000000c0  00000000  00000000  00008000  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  1 .text         00000016  000000c0  000000c0  000080c0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .text.Reset_Handler 00000054  000000d8  000000d8  000080d8  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .text.Default_Handler 00000002  0000012c  0000012c  0000812c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  4 .text.startup 00000002  0000012e  0000012e  0000812e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  5 .ARM.attributes 0000002d  00000000  00000000  00008130  2**0
+                  CONTENTS, READONLY
+  6 .comment      00000070  00000000  00000000  0000815d  2**0
+                  CONTENTS, READONLY
+  7 .debug_info   000000b3  00000000  00000000  000081cd  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 000000a0  00000000  00000000  00008280  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_aranges 00000040  00000000  00000000  00008320  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_line   0000009a  00000000  00000000  00008360  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    000000c3  00000000  00000000  000083fa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_frame  00000040  00000000  00000000  000084c0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_ranges 00000010  00000000  00000000  00008500  2**0
+                  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+00000000 l    d  .vectors	00000000 .vectors
+000000c0 l    d  .text	00000000 .text
+000000d8 l    d  .text.Reset_Handler	00000000 .text.Reset_Handler
+0000012c l    d  .text.Default_Handler	00000000 .text.Default_Handler
+0000012e l    d  .text.startup	00000000 .text.startup
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+40000524 l       *ABS*	00000000 NRF_POWER_RAMON_ADDRESS
+0000000f l       *ABS*	00000000 NRF_POWER_RAMON_RAMxON_ONMODE_Msk
+000000ee l       .text.Reset_Handler	00000000 LoopCopyDataInit
+000000e6 l       .text.Reset_Handler	00000000 CopyDataInit
+00000102 l       .text.Reset_Handler	00000000 LoopFillZerobss
+000000fc l       .text.Reset_Handler	00000000 FillZerobss
+0000012c l       .text.Default_Handler	00000000 Infinite_Loop
+00000000 l    df *ABS*	00000000 Initialize.c
+00000000 l    df *ABS*	00000000 main.c
+0000012c  w    F .text.Default_Handler	00000002 TIMER2_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 SPI0_TWI0_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 RTC0_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 HardFault_Handler
+0000012c  w    F .text.Default_Handler	00000002 SysTick_Handler
+0000012c  w    F .text.Default_Handler	00000002 GPIOTE_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 PendSV_Handler
+0000012c  w    F .text.Default_Handler	00000002 NMI_Handler
+0000012c  w    F .text.Default_Handler	00000002 POWER_CLOCK_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 RADIO_IRQHandler
+20000000 g       .text.startup	00000000 _start_data
+0000012c  w    F .text.Default_Handler	00000002 SWI4_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 TEMP_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 QDEC_IRQHandler
+20000000 g       .text.startup	00000000 _end_data
+0000012c  w    F .text.Default_Handler	00000002 UART0_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 SWI5_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 TIMER0_IRQHandler
+000000d8  w    F .text.Reset_Handler	0000003a Reset_Handler
+0000012c  w    F .text.Default_Handler	00000002 SWI0_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 TIMER1_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 ECB_IRQHandler
+0000012c g       .text.Default_Handler	00000002 Default_Handler
+0000012c  w    F .text.Default_Handler	00000002 ADC_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 LPCOMP_COMP_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 SWI3_IRQHandler
+20003ffc g       *ABS*	00000000 _end_stack
+00000130 g       *ABS*	00000000 _start_data_flash
+0000012e g     F .text.startup	00000002 main
+20000000 g       *ABS*	00000000 _start_stack
+0000012c  w    F .text.Default_Handler	00000002 CCM_AAR_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 WDT_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 SVC_Handler
+0000012c  w    F .text.Default_Handler	00000002 SWI2_IRQHandler
+000000d4 g     F .text	00000002 SystemInit
+0000012c  w    F .text.Default_Handler	00000002 RNG_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 SPI1_TWI1_IRQHandler
+0000012c  w    F .text.Default_Handler	00000002 RTC1_IRQHandler
+20000000 g       .text.startup	00000000 _end_bss
+20000000 g       .text.startup	00000000 _start_bss
+20000000 g       *ABS*	00000000 _end
+00000000 g     O .vectors	00000000 g_pfnVectors
+0000012c  w    F .text.Default_Handler	00000002 SWI1_IRQHandler
+
+
+
+Disassembly of section .text:
+
+000000c0 <SystemInit-0x14>:
+  c0:	00000130 	.word	0x00000130
+  c4:	20000000 	.word	0x20000000
+  c8:	20000000 	.word	0x20000000
+  cc:	20000000 	.word	0x20000000
+  d0:	20000000 	.word	0x20000000
+
+000000d4 <SystemInit>:
+{
+	volatile uint32_t	regState;
+
+	  //Set the clock and other stuff
+
+}
+  d4:	4770      	bx	lr
+
+Disassembly of section .text.Reset_Handler:
+
+000000d8 <Reset_Handler>:
+  d8:	480e      	ldr	r0, [pc, #56]	; (114 <LoopFillZerobss+0x12>)
+  da:	6802      	ldr	r2, [r0, #0]
+  dc:	210f      	movs	r1, #15
+  de:	430a      	orrs	r2, r1
+  e0:	6002      	str	r2, [r0, #0]
+  e2:	2100      	movs	r1, #0
+  e4:	e003      	b.n	ee <LoopCopyDataInit>
+
+000000e6 <CopyDataInit>:
+  e6:	4b0c      	ldr	r3, [pc, #48]	; (118 <LoopFillZerobss+0x16>)
+  e8:	585b      	ldr	r3, [r3, r1]
+  ea:	5043      	str	r3, [r0, r1]
+  ec:	3104      	adds	r1, #4
+
+000000ee <LoopCopyDataInit>:
+  ee:	480b      	ldr	r0, [pc, #44]	; (11c <LoopFillZerobss+0x1a>)
+  f0:	4b0b      	ldr	r3, [pc, #44]	; (120 <LoopFillZerobss+0x1e>)
+  f2:	1842      	adds	r2, r0, r1
+  f4:	429a      	cmp	r2, r3
+  f6:	d3f6      	bcc.n	e6 <CopyDataInit>
+  f8:	4a0a      	ldr	r2, [pc, #40]	; (124 <LoopFillZerobss+0x22>)
+  fa:	e002      	b.n	102 <LoopFillZerobss>
+
+000000fc <FillZerobss>:
+  fc:	2300      	movs	r3, #0
+  fe:	6013      	str	r3, [r2, #0]
+ 100:	3204      	adds	r2, #4
+
+00000102 <LoopFillZerobss>:
+ 102:	4b09      	ldr	r3, [pc, #36]	; (128 <LoopFillZerobss+0x26>)
+ 104:	429a      	cmp	r2, r3
+ 106:	d3f9      	bcc.n	fc <FillZerobss>
+ 108:	f7ff ffe4 	bl	d4 <SystemInit>
+ 10c:	f000 f80f 	bl	12e <main>
+ 110:	4770      	bx	lr
+ 112:	0000      	.short	0x0000
+ 114:	40000524 	.word	0x40000524
+ 118:	00000130 	.word	0x00000130
+ 11c:	20000000 	.word	0x20000000
+ 120:	20000000 	.word	0x20000000
+ 124:	20000000 	.word	0x20000000
+ 128:	20000000 	.word	0x20000000
+
+Disassembly of section .text.Default_Handler:
+
+0000012c <ADC_IRQHandler>:
+ 12c:	e7fe      	b.n	12c <ADC_IRQHandler>
+
+Disassembly of section .text.startup:
+
+0000012e <main>:
+#include "Headers/nRF51822.h"
+
+
+
+int main(void)
+{
+ 12e:	e7fe      	b.n	12e <main>
