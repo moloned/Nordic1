@@ -85,27 +85,27 @@ LOAD Objects/main.o
 .iplt           0x0000000000000130        0x0
  .iplt          0x0000000000000000        0x0 Objects/startup.o
 
-.text.startup   0x000000000000012e        0x2
- .text.startup  0x000000000000012e        0x2 Objects/main.o
-                0x000000000000012e                main
+.text.startup   0x0000000000000130       0x58
+ .text.startup  0x0000000000000130       0x58 Objects/main.o
+                0x0000000000000130                main
 
-.rel.dyn        0x0000000000000130        0x0
+.rel.dyn        0x0000000000000188        0x0
  .rel.iplt      0x0000000000000000        0x0 Objects/startup.o
 
-.data           0x0000000020000000        0x0 load address 0x0000000000000130
+.data           0x0000000020000000        0x0 load address 0x0000000000000188
                 0x0000000020000000                _start_data = .
  *(.data)
  .data          0x0000000020000000        0x0 Objects/startup.o
  .data          0x0000000020000000        0x0 Objects/Initialize.o
  .data          0x0000000020000000        0x0 Objects/main.o
                 0x0000000020000000                _end_data = .
-                0x0000000000000130                _start_data_flash = LOADADDR (.data)
+                0x0000000000000188                _start_data_flash = LOADADDR (.data)
 
-.igot.plt       0x0000000020000000        0x0 load address 0x0000000000000130
+.igot.plt       0x0000000020000000        0x0 load address 0x0000000000000188
  .igot.plt      0x0000000000000000        0x0 Objects/startup.o
                 0x0000000020000000                . = ALIGN (0x4)
 
-.bss            0x0000000020000000        0x0 load address 0x0000000000000130
+.bss            0x0000000020000000        0x0 load address 0x0000000000000188
                 0x0000000020000000                _start_bss = .
  *(.bss)
  .bss           0x0000000020000000        0x0 Objects/startup.o
@@ -133,13 +133,13 @@ OUTPUT(nRF51822.elf elf32-littlearm)
                                          0x71 (size before relaxing)
  .comment       0x0000000000000000       0x71 Objects/main.o
 
-.debug_info     0x0000000000000000       0xb3
+.debug_info     0x0000000000000000       0xd8
  .debug_info    0x0000000000000000       0x62 Objects/Initialize.o
- .debug_info    0x0000000000000062       0x51 Objects/main.o
+ .debug_info    0x0000000000000062       0x76 Objects/main.o
 
-.debug_abbrev   0x0000000000000000       0xa0
+.debug_abbrev   0x0000000000000000       0xc5
  .debug_abbrev  0x0000000000000000       0x5a Objects/Initialize.o
- .debug_abbrev  0x000000000000005a       0x46 Objects/main.o
+ .debug_abbrev  0x000000000000005a       0x6b Objects/main.o
 
 .debug_aranges  0x0000000000000000       0x40
  .debug_aranges
@@ -147,18 +147,21 @@ OUTPUT(nRF51822.elf elf32-littlearm)
  .debug_aranges
                 0x0000000000000020       0x20 Objects/main.o
 
-.debug_line     0x0000000000000000       0x9a
+.debug_line     0x0000000000000000       0xcc
  .debug_line    0x0000000000000000       0x5e Objects/Initialize.o
- .debug_line    0x000000000000005e       0x3c Objects/main.o
+ .debug_line    0x000000000000005e       0x6e Objects/main.o
 
-.debug_str      0x0000000000000000       0xc3
+.debug_str      0x0000000000000000       0xc9
  .debug_str     0x0000000000000000       0xaf Objects/Initialize.o
- .debug_str     0x00000000000000af       0x14 Objects/main.o
-                                         0x90 (size before relaxing)
+ .debug_str     0x00000000000000af       0x1a Objects/main.o
+                                         0x9f (size before relaxing)
 
-.debug_frame    0x0000000000000000       0x40
+.debug_frame    0x0000000000000000       0x44
  .debug_frame   0x0000000000000000       0x20 Objects/Initialize.o
- .debug_frame   0x0000000000000020       0x20 Objects/main.o
+ .debug_frame   0x0000000000000020       0x24 Objects/main.o
+
+.debug_loc      0x0000000000000000       0x57
+ .debug_loc     0x0000000000000000       0x57 Objects/main.o
 
 .debug_ranges   0x0000000000000000       0x10
  .debug_ranges  0x0000000000000000       0x10 Objects/main.o
